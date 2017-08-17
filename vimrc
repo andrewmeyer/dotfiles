@@ -38,7 +38,7 @@ VAMActivate github:chrisbra/Recover.vim
 VAMActivate github:genadyp/vawa.vim
 VAMActivate github:andrewmeyer/ansible-vim
 VAMActivate github:Glench/Vim-Jinja2-Syntax
-VAMActivate github:zimbatm/haproxy.vim
+VAMActivate github:andrewmeyer/haproxy.vim
 VAMActivate github:chr4/nginx.vim
 VAMActivate github:dag/vim-fish
 
