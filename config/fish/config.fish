@@ -9,11 +9,17 @@ set -x ANSIBLE_CONFIG ~/code/ansible/ansible1-ord6/ansible.cfg
 set -x ANSIBLE_INVENTORY ~/ansible1-ord6/hosts
 set -x ANSIBLE_ROLES_PATH ~/ansible-roles/roles
 set -x ANSIBLE_NOCOWS 1
+#if a dircolors file exists, load it
 if test -e ~/.dircolors
   set -x LS_COLORS (bash -c 'eval `dircolors ~/.dircolors`; echo $LS_COLORS')
 end
+#if an aliases file exists, load it
 if test -e ~/.config/fish/aliases.fish
   source ~/.config/fish/aliases.fish
+end
+#if gnupg's ssh support is enabled, force us to use it
+if test -e ~/.gnupg/S.gpg-agent.ssh
+  set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 end
 
 #fish git stuff
