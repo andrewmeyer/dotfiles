@@ -9,6 +9,10 @@ set -x ANSIBLE_CONFIG ~/code/ansible/ansible1-ord6/ansible.cfg
 set -x ANSIBLE_INVENTORY ~/ansible1-ord6/hosts
 set -x ANSIBLE_ROLES_PATH ~/ansible-roles/roles
 set -x ANSIBLE_NOCOWS 1
+#if we are connecting via gpg, set the gpg tty to the ssh socket
+if test -n $SSH_TTY
+  set -x GPG_TTY $SSH_TTY
+end
 #if a dircolors file exists, load it
 if test -e ~/.dircolors
   set -x LS_COLORS (bash -c 'eval `dircolors ~/.dircolors`; echo $LS_COLORS')
