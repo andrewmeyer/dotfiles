@@ -1,6 +1,6 @@
 set -g -x fish_greeting 'Establishing battlefield control...'
 set PATH /home/ameyer/mypath $PATH
-set LD_LIBRARY_PATH /usr/local/pulse $LD_LIBRARY_PATH
+set LD_LIBRARY_PATH /usr/local/pulse:$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/gtk-2.0/modules/
 set MSF_DATABASE_CONFIG /opt/metasploit-framework/config/database.yml
 set -x ENCFS6_CONFIG '/home/ameyer/.encfs6.xml'
 set -x EDITOR 'vim'
@@ -20,6 +20,12 @@ end
 #if an aliases file exists, load it
 if test -e ~/.config/fish/aliases.fish
   source ~/.config/fish/aliases.fish
+end
+# if gpg-agent is installed launch it at startup,
+set 99GPG_AGENT (bash -c 'which gpg-agent')
+set 99GPGCONF (bash -c 'which gpgconf')
+if test -n $99GPG_AGENT -a -n $99GPGCONF
+  bash -c "eval `$99GPGCONF --launch gpg-agent`"
 end
 #if gnupg's ssh support is enabled, force us to use it
 if test -e ~/.gnupg/S.gpg-agent.ssh
