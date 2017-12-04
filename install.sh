@@ -30,4 +30,4 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 rm -rf ~/.config/fish
-ln -s $dir/config/fish ~/.config.fish
+ln -s $dir/config/fish ~/.config/fish
