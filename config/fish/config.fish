@@ -31,6 +31,14 @@ end
 if test -e ~/.gnupg/S.gpg-agent.ssh
   set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
 end
+#test if there is an motd
+if test -e /usr/local/bin/motd
+  bash -c '/usr/local/bin/motd'
+else
+  if test -e /etc/motd
+    bach -c 'cat /etc/motd'
+  end
+end
 
 #fish git stuff
 set normal (set_color normal)
