@@ -64,6 +64,8 @@ VAMActivate github:Glench/Vim-Jinja2-Syntax
 VAMActivate github:andrewmeyer/haproxy.vim
 VAMActivate github:chr4/nginx.vim
 VAMActivate github:dag/vim-fish
+VAMActivate github:rhysd/vim-gfm-syntax
+VAMActivate github:w0rp/ale
 
 " theme
 set background=dark
@@ -169,7 +171,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
+let g:airline#extensions#ale#enabled = 1
 
 "ansible
 let g:ansible_unindent_after_newline = 1
