@@ -15,8 +15,8 @@ if test -e ~/.dircolors
   set -x LS_COLORS (bash -c 'eval `dircolors ~/.dircolors`; echo $LS_COLORS')
 end
 #if a global aliases file exists, load it
-if test -e ~/config/fish/gloabl_aliases.fish
-  source ~/config/fish/global_aliases.fish
+if test -e ~/.config/fish/global_aliases.fish
+  source ~/.config/fish/global_aliases.fish
 end
 #if a local aliases file exists, load it
 if test -e ~/.config/fish/local_aliases.fish
