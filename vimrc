@@ -176,9 +176,12 @@ let g:airline#extensions#ale#enabled = 1
 "ansible
 let g:ansible_unindent_after_newline = 1
 let g:ansible_name_highlight = 'b'
+
+"ale
+let g:ale_yaml_yamllint_options = '-c /home/ameyer/.config/yamllint/config'
+
 "
 " see also:
 " http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 " http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 " http://grantlucas.com/posts/2012/09/using-vim-arduino-development
-
