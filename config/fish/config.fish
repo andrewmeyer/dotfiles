@@ -1,17 +1,10 @@
 set -g -x fish_greeting 'Establishing battlefield control...'
 set PATH /home/ameyer/mypath $PATH
-set LD_LIBRARY_PATH /usr/local/pulse:$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu/gtk-2.0/modules/
-set MSF_DATABASE_CONFIG /opt/metasploit-framework/config/database.yml
-set -x ENCFS6_CONFIG '/home/ameyer/.encfs6.xml'
 set -x EDITOR 'vim'
-set -x ANSIBLE_VAULT_PASSWORD_FILE ~/.vault_pass.conf
-set -x ANSIBLE_CONFIG ~/code/ansible/ansible1-ord6/ansible.cfg
-set -x ANSIBLE_INVENTORY ~/ansible1-ord6/hosts
-set -x ANSIBLE_ROLES_PATH ~/ansible-roles/roles
 set -x ANSIBLE_NOCOWS 1
 #if local_exports.fish exists, source it
-if test -e ./local_exports.fish
-  source ./local_exports.fish
+if test -e ~/.config/fish/local_exports.fish
+  source ~/.config/fish/local_exports.fish
 end
 #if we are connecting via gpg, set the gpg tty to the ssh socket
 if test -n $SSH_TTY
@@ -22,12 +15,12 @@ if test -e ~/.dircolors
   set -x LS_COLORS (bash -c 'eval `dircolors ~/.dircolors`; echo $LS_COLORS')
 end
 #if a global aliases file exists, load it
-if test -e ./gloabl_aliases.fish
-  source ./global_aliases.fish
+if test -e ~/config/fish/gloabl_aliases.fish
+  source ~/config/fish/global_aliases.fish
 end
 #if a local aliases file exists, load it
-if test -e ~/.config/fish/aliases.fish
-  source ~/.config/fish/aliases.fish
+if test -e ~/.config/fish/local_aliases.fish
+  source ~/.config/fish/local_aliases.fish
 end
 # if gpg-agent is installed launch it at startup,
 set 99GPG_AGENT (bash -c 'which gpg-agent')
