@@ -1,1 +1,2 @@
-config/fish/aliases.fish
+config/fish/local_aliases.fish
+config/fish/local_exports.fish
