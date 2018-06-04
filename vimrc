@@ -98,7 +98,7 @@ set visualbell
 set ruler
 set ttyfast
 set backspace=indent,eol,start
-set colorcolumn=90
+set colorcolumn=150
 
 " tabbing
 set autoindent            " auto-indent

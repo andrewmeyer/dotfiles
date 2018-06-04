@@ -9,6 +9,10 @@ set -x ANSIBLE_CONFIG ~/code/ansible/ansible1-ord6/ansible.cfg
 set -x ANSIBLE_INVENTORY ~/ansible1-ord6/hosts
 set -x ANSIBLE_ROLES_PATH ~/ansible-roles/roles
 set -x ANSIBLE_NOCOWS 1
+#if local_exports.fish exists, source it
+if test -e ./local_exports.fish
+  source ./local_exports.fish
+end
 #if we are connecting via gpg, set the gpg tty to the ssh socket
 if test -n $SSH_TTY
   set -x GPG_TTY $SSH_TTY
@@ -17,7 +21,11 @@ end
 if test -e ~/.dircolors
   set -x LS_COLORS (bash -c 'eval `dircolors ~/.dircolors`; echo $LS_COLORS')
 end
-#if an aliases file exists, load it
+#if a global aliases file exists, load it
+if test -e ./gloabl_aliases.fish
+  source ./global_aliases.fish
+end
+#if a local aliases file exists, load it
 if test -e ~/.config/fish/aliases.fish
   source ~/.config/fish/aliases.fish
 end
