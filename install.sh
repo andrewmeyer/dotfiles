@@ -31,3 +31,4 @@ for file in $files; do
 done
 rm -rf ~/.config/fish
 ln -s $dir/config/fish ~/.config/fish
+ln -s $dir/config/yamllint ~/.config/yamllint
