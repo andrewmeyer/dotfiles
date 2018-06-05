@@ -59,8 +59,8 @@ VAMActivate github:tpope/vim-unimpaired
 VAMActivate github:majutsushi/tagbar " requires ctags executable
 VAMActivate github:chrisbra/Recover.vim
 VAMActivate github:genadyp/vawa.vim
-VAMActivate github:andrewmeyer/ansible-vim
 VAMActivate github:Glench/Vim-Jinja2-Syntax
+VAMActivate github:andrewmeyer/ansible-vim
 VAMActivate github:andrewmeyer/haproxy.vim
 VAMActivate github:chr4/nginx.vim
 VAMActivate github:dag/vim-fish
@@ -176,6 +176,11 @@ let g:airline#extensions#ale#enabled = 1
 "ansible
 let g:ansible_unindent_after_newline = 1
 let g:ansible_name_highlight = 'b'
+let g:ansible_template_syntaxes = {
+      \ '*.haproxy.cfg.j2': 'haproxy',
+      \ '*.php.j2': 'php',
+      \ '*.crons?.j2': 'crontab',
+    \  }
 
 "ale
 let g:ale_yaml_yamllint_options = '-c /home/ameyer/.config/yamllint/config'
