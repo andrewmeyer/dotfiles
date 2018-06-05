@@ -2,3 +2,4 @@ config/fish/local_aliases.fish
 config/fish/local_exports.fish
 config/fish/fish_history
 config/fish/fishd.*
+config/fish/functions/*key_bindings.fish
