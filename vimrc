@@ -60,11 +60,12 @@ VAMActivate github:majutsushi/tagbar " requires ctags executable
 VAMActivate github:chrisbra/Recover.vim
 VAMActivate github:genadyp/vawa.vim
 VAMActivate github:Glench/Vim-Jinja2-Syntax
-VAMActivate github:pearofducks/ansible-vim
 VAMActivate github:andrewmeyer/haproxy.vim
 VAMActivate github:chr4/nginx.vim
 VAMActivate github:dag/vim-fish
 VAMActivate github:rhysd/vim-gfm-syntax
+VAMActivate github:chrisbra/csv.vim
+VAMActivate github:andrewmeyer/ansible-vim
 VAMActivate github:w0rp/ale
 
 " theme
