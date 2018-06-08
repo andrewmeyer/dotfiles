@@ -2,6 +2,7 @@ set -g -x fish_greeting 'Establishing battlefield control...'
 set PATH /home/ameyer/mypath $PATH
 set -x EDITOR 'vim'
 set -x ANSIBLE_NOCOWS 1
+set -x TERM xterm-256color
 #if local_exports.fish exists, source it
 if test -e ~/.config/fish/local_exports.fish
   source ~/.config/fish/local_exports.fish
