@@ -100,6 +100,7 @@ set ruler
 set ttyfast
 set backspace=indent,eol,start
 set colorcolumn=150
+set t_BE=
 
 " tabbing
 set autoindent            " auto-indent
