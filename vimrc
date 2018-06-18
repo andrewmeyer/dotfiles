@@ -67,6 +67,7 @@ VAMActivate github:rhysd/vim-gfm-syntax
 VAMActivate github:chikamichi/mediawiki.vim
 VAMActivate github:chrisbra/csv.vim
 VAMActivate github:andrewmeyer/ansible-vim
+VAMActivate github:andrewmeyer/interfaces
 VAMActivate github:w0rp/ale
 
 "set redpen to run with wiki files
