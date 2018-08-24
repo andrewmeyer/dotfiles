@@ -90,7 +90,8 @@ let mojo_highlight_data=1
 
 " behavior
 syntax enable
-set modelines=0
+set modeline
+set modelines=5
 set encoding=utf-8
 set number
 set hidden
@@ -187,6 +188,7 @@ let g:ansible_template_syntaxes = {
       \ '*.haproxy.cfg.j2': 'haproxy',
       \ '*.php.j2': 'php',
       \ '*.crons?.j2': 'crontab',
+      \ '*.ya?ml.j2': 'yaml',
     \  }
 
 "ale
