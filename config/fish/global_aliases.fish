@@ -5,4 +5,3 @@ alias gf "git fetch"
 alias gd "git diff"
 alias gds "git diff --staged"
 alias fixpaste 'printf "\e[?2004l"'
-alias pass ' pass'
