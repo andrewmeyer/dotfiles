@@ -1,9 +1,11 @@
 set -g -x fish_greeting 'Establishing battlefield control...'
-set PATH /home/ameyer/mypath /home/ameyer/bin $PATH
+set PATH /home/ameyer/bin $PATH
 set -x EDITOR 'vim'
 set -x ANSIBLE_NOCOWS 1
 set -x ANSIBLE_STDOUT_CALLBACK debug
 set -x TERM xterm-256color
+set -x UID (bash -c 'id -u')
+set -x GID (bash -c 'id -g')
 #if local_exports.fish exists, source it
 if test -e ~/.config/fish/local_exports.fish
   source ~/.config/fish/local_exports.fish
