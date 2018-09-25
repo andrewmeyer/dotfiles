@@ -35,6 +35,8 @@ end
 #if gnupg's ssh support is enabled, force us to use it
 if test -e ~/.gnupg/S.gpg-agent.ssh
   set -x SSH_AUTH_SOCK ~/.gnupg/S.gpg-agent.ssh
+else if test -e /run/user/$UID/gnupg/S.gpg-agent.ssh
+  set -x SSH_AUTH_SOCK /run/user/$UID/gnupg/S.gpg-agent.ssh
 end
 #test if there is an motd
 if test -e /usr/local/bin/motd
